@@ -1,0 +1,66 @@
+// RESET
+body{
+    margin: 0;
+}
+// COLOR
+$background_color: rgba(245, 241, 237, 1);
+$paragraph_color: rgba(69, 4, 12, 1);
+
+// TYPOGRAPHY
+
+@mixin font-package{
+    font-family: 'Roboto', Verdana, sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: $paragraph_color; 
+}
+
+// LIST RESET
+@mixin list-reset{
+    ul{
+        list-style-type: none;
+    }
+
+    a{
+        color: $paragraph_color;
+        text-decoration: none;
+    }
+}
+
+nav, .footer-nav{
+    @include list-reset()
+}
+
+// FLEXBOX
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 40px;
+}
+
+.main-nav ul{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0 5vw;
+    padding: 0;
+}
+
+nav{
+    flex: 0.8;
+}
+
+
+body{
+
+    background-color: $background_color;
+
+    p, h1, h2, h3{
+        @include font-package();
+    }
+    
+}
+
+
+

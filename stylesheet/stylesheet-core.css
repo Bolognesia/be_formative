@@ -2,12 +2,67 @@ body {
   margin: 0;
 }
 
+body {
+  background-color: rgb(245, 241, 237);
+}
+body p {
+  font-family: "Roboto", Verdana, sans-serif;
+  font-weight: 400;
+  font-size: 1em;
+  color: rgb(69, 4, 12);
+}
+body h1 {
+  font-family: "Libre Baskerville", serif;
+  font-weight: bold;
+  color: rgb(69, 4, 12);
+  font-size: 3em;
+}
+body h2 {
+  font-family: "Libre Baskerville", serif;
+  font-weight: bold;
+  color: rgb(69, 4, 12);
+}
+
 nav ul, .footer-nav ul {
   list-style-type: none;
 }
 nav a, .footer-nav a {
   color: rgb(69, 4, 12);
   text-decoration: none;
+}
+
+.btn {
+  background-color: rgb(69, 4, 12);
+  font-family: "Roboto", Verdana, sans-serif;
+  font-weight: 400;
+  font-size: 1em;
+  color: rgb(69, 4, 12);
+  padding: 10px 40px;
+  border-radius: 30px;
+  text-align: center;
+  margin: 4px 2px;
+  color: rgb(245, 241, 237);
+}
+.btn .btn:hover {
+  background-color: rgb(245, 241, 237);
+  color: rgb(69, 4, 12);
+}
+
+.btn-beige {
+  background-color: rgb(245, 241, 237);
+  font-family: "Roboto", Verdana, sans-serif;
+  font-weight: 400;
+  font-size: 1em;
+  color: rgb(69, 4, 12);
+  padding: 10px 40px;
+  border-radius: 30px;
+  text-align: center;
+  margin: 4px 2px;
+  color: rgb(69, 4, 12);
+}
+.btn-beige .btn-beige:hover {
+  background-color: rgb(69, 4, 12);
+  color: rgb(69, 4, 12);
 }
 
 header {
@@ -26,21 +81,84 @@ header {
   align-items: center;
   margin: 0 5vw;
   padding: 0;
+  font-size: 1.3em;
 }
 .main-nav a {
   padding: 1em;
 }
-
-body {
-  background-color: rgb(245, 241, 237);
+.main-nav li:hover {
+  text-decoration: underline;
 }
-body p {
+
+.image-container {
+  height: 25vw;
+}
+.image-container img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.gallery-container {
+  margin: 5px;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.gallery > div {
+  flex: 1;
+}
+
+.gallery img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+  vertical-align: middle;
+  border-radius: 5px;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.center-text {
+  text-align: center;
+}
+
+.dark-container {
+  background-color: rgb(69, 4, 12);
+  padding: 3em;
+}
+.dark-container p {
+  color: rgb(245, 241, 237);
+  font-style: italic;
+}
+
+.newsletter {
+  text-align: center;
+}
+.newsletter .input {
   font-family: "Roboto", Verdana, sans-serif;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 1em;
   color: rgb(69, 4, 12);
+  padding: 10px 40px;
+  border-radius: 30px;
+  text-align: center;
+  margin: 4px 2px;
+  text-align: left;
+  color: rgb(245, 241, 237);
+  background-color: rgb(69, 4, 12);
+  border-color: rgb(245, 241, 237);
 }
-body h1 {
-  font-family: "Libre Baskerville", sans-serif;
-  font-weight: bold;
+.newsletter p {
+  font-style: normal;
 }/*# sourceMappingURL=stylesheet-core.css.map */

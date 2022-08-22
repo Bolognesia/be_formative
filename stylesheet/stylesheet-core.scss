@@ -5,6 +5,15 @@ body{
 // COLOR
 $background_color: rgba(245, 241, 237, 1);
 $main_color: rgba(69, 4, 12, 1);
+$basic_font_size: 1em;
+
+
+@mixin buttons{
+    padding: 10px 40px;
+    border-radius: 30px;
+    text-align: center;
+    margin: 4px 2px;
+}
 
 
 // TYPOGRAPHY
@@ -12,15 +21,33 @@ $main_color: rgba(69, 4, 12, 1);
 @mixin font-package{
     font-family: 'Roboto', Verdana, sans-serif;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 1em;
     color: $main_color; 
 }
 
 @mixin heading{
-    font-family: 'Libre Baskerville', sans-serif;
+    font-family: 'Libre Baskerville', serif;
     font-weight: bold;
+    color: $main_color;
 }
 
+body{
+    background-color: $background_color;
+
+    p{
+        @include font-package();
+    }
+
+    h1{
+        @include heading();
+        font-size: $basic_font_size * 3;
+        
+    }
+
+    h2{
+        @include heading();
+    }
+}
 
 // LIST RESET
 @mixin list-reset{
@@ -39,6 +66,29 @@ nav, .footer-nav{
 }
 
 // BUTTONS
+.btn{
+    background-color: $main_color;
+    @include font-package();
+    @include buttons();
+    color: $background_color;
+
+    .btn:hover{
+        background-color: $background_color;
+        color: $main_color;
+    }
+}
+
+.btn-beige{
+    background-color: $background_color;
+    @include font-package();
+    @include buttons();
+    color: $main_color;
+
+    .btn-beige:hover{
+        background-color: $main_color;
+        color: $main_color;
+    }
+}
 
 
 // FLEXBOX MAIN NAV
@@ -58,32 +108,85 @@ header{
         align-items: center;
         margin: 0 5vw;
         padding: 0;
+        font-size: 1.3em;
     }
 
     a{
         padding: 1em;
     }
 
+    li:hover{
+        text-decoration: underline;
+    }
 }
 
-body{
-    background-color: $background_color;
+// FLEX IMAGES
+.image-container{
+    height: 25vw;
+
+    img{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+// GALLERY 
+.gallery-container{
+    margin: 5px;
+}
+
+.gallery{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.gallery > div{
+    flex: 1;
+}
+
+.gallery img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+    border-radius: 5px;
+}
+
+.flex-container{
+    display: flex;
+    justify-content: space-around;
+}
+
+.center-text{
+    text-align: center;
+}
+
+.dark-container{
+    background-color: $main_color;
+    padding: 3em;
+    
 
     p{
+        color: $background_color;
+        font-style: italic;
+    }
+}
+
+.newsletter{
+    text-align: center;
+    .input{
         @include font-package();
+        @include buttons();
+        text-align: left;
+        color: $background_color;
+        background-color: $main_color;
+        border-color: $background_color;
     }
 
-    h1{
-        @include heading()
+    p{
+        font-style: normal;
     }
-}
-
-.image-container{
-    max-height: 100px;
-}
-
-.image-container img{
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
 }

@@ -4,7 +4,8 @@ body{
 }
 // COLOR
 $background_color: rgba(245, 241, 237, 1);
-$paragraph_color: rgba(69, 4, 12, 1);
+$main_color: rgba(69, 4, 12, 1);
+
 
 // TYPOGRAPHY
 
@@ -12,8 +13,14 @@ $paragraph_color: rgba(69, 4, 12, 1);
     font-family: 'Roboto', Verdana, sans-serif;
     font-weight: 400;
     font-size: 16px;
-    color: $paragraph_color; 
+    color: $main_color; 
 }
+
+@mixin heading{
+    font-family: 'Libre Baskerville', sans-serif;
+    font-weight: bold;
+}
+
 
 // LIST RESET
 @mixin list-reset{
@@ -22,7 +29,7 @@ $paragraph_color: rgba(69, 4, 12, 1);
     }
 
     a{
-        color: $paragraph_color;
+        color: $main_color;
         text-decoration: none;
     }
 }
@@ -31,7 +38,10 @@ nav, .footer-nav{
     @include list-reset()
 }
 
-// FLEXBOX
+// BUTTONS
+
+
+// FLEXBOX MAIN NAV
 header{
     display: flex;
     justify-content: space-between;
@@ -39,28 +49,41 @@ header{
     margin: 40px;
 }
 
-.main-nav ul{
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    margin: 0 5vw;
-    padding: 0;
-}
-
-nav{
+.main-nav{
     flex: 0.8;
-}
 
+    ul{    
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        margin: 0 5vw;
+        padding: 0;
+    }
+
+    a{
+        padding: 1em;
+    }
+
+}
 
 body{
-
     background-color: $background_color;
 
-    p, h1, h2, h3{
+    p{
         @include font-package();
     }
-    
+
+    h1{
+        @include heading()
+    }
 }
 
+.image-container{
+    max-height: 100px;
+}
 
-
+.image-container img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}

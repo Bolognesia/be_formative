@@ -46,6 +46,17 @@ body{
 
     h2{
         @include heading();
+        font-size: $basic_font_size * 2;
+    }
+
+    h3{
+        @include heading();
+    }
+
+    h4{
+        color: $main_color;
+        @include font-package();
+        font-weight: bold;
     }
 }
 
@@ -71,11 +82,13 @@ nav, .footer-nav{
     @include font-package();
     @include buttons();
     color: $background_color;
+}
 
-    .btn:hover{
-        background-color: $background_color;
-        color: $main_color;
-    }
+.btn:hover{
+    background-color: $background_color;
+    color: $main_color;
+    cursor: pointer;
+
 }
 
 .btn-beige{
@@ -83,11 +96,12 @@ nav, .footer-nav{
     @include font-package();
     @include buttons();
     color: $main_color;
+}
 
-    .btn-beige:hover{
-        background-color: $main_color;
-        color: $main_color;
-    }
+.btn-beige:hover{
+    background-color: $main_color;
+    color: $background_color;
+    cursor: pointer;
 }
 
 
@@ -123,12 +137,23 @@ header{
 // FLEX IMAGES
 .image-container{
     height: 25vw;
+    position: relative;
 
     img{
         height: 100%;
         width: 100%;
         object-fit: cover;
     }
+}
+
+.text-over-image{
+    position: absolute;
+    bottom: 8px;
+    left: 40px;
+    background-color: rgba(245, 241, 237, 0.5);
+    border-radius: 1em;
+    margin: 1em;
+    padding: 1em;
 }
 
 // GALLERY 
@@ -155,18 +180,20 @@ header{
     border-radius: 5px;
 }
 
-.flex-container{
+// RECOMMENDATIONS
+.flex-recommendations{
     display: flex;
     justify-content: space-around;
 }
 
-.center-text{
+.recommendations{
     text-align: center;
 }
 
 .dark-container{
     background-color: $main_color;
     padding: 3em;
+    text-align: center;
     
 
     p{
@@ -175,8 +202,11 @@ header{
     }
 }
 
+
+// NEWSLETTER
 .newsletter{
     text-align: center;
+
     .input{
         @include font-package();
         @include buttons();
@@ -189,4 +219,36 @@ header{
     p{
         font-style: normal;
     }
+
+    h2{
+        color: $background_color;
+    }
+}
+
+// FOOTER
+footer section{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2em;
+}
+
+.footer-nav{
+    display: flex;
+    justify-content: space-between;
+    min-width: 350px;
+}
+
+.footer-nav div h4:hover, .footer-nav div p:hover{
+    text-decoration: underline;
+}
+
+
+.social-media{
+    @include font-package();
+    text-align: end;
+    margin: 1em;
+}
+
+span{
+    @include font-package();
 }

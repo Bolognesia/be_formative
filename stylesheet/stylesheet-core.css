@@ -22,6 +22,7 @@ body h2 {
   font-weight: bold;
   color: rgb(69, 4, 12);
   font-size: 2em;
+  text-align: center;
 }
 body h3 {
   font-family: "Libre Baskerville", serif;
@@ -81,6 +82,7 @@ nav a, .footer-nav a {
   background-color: rgb(69, 4, 12);
   color: rgb(245, 241, 237);
   cursor: pointer;
+  border-color: rgb(245, 241, 237);
 }
 
 header {
@@ -130,27 +132,27 @@ header {
 }
 
 .gallery-container {
-  margin: 5px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-auto-rows: minmax(100px, auto);
+  grid-gap: 10px;
+  margin: 10px auto 10px;
+  max-width: 1300px;
 }
-
-.gallery {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 10px;
+.gallery-container div {
+  padding: 50%;
+  position: relative;
 }
-
-.gallery > div {
-  flex: 1;
-}
-
-.gallery img {
+.gallery-container div img {
   -o-object-fit: cover;
      object-fit: cover;
   width: 100%;
   height: 100%;
-  vertical-align: middle;
-  border-radius: 5px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
 }
 
 .flex-recommendations {
@@ -160,6 +162,7 @@ header {
 
 .recommendations {
   text-align: center;
+  padding: 3em;
 }
 
 .dark-container {

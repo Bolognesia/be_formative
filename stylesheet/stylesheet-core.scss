@@ -47,6 +47,7 @@ body{
     h2{
         @include heading();
         font-size: $basic_font_size * 2;
+        text-align: center;
     }
 
     h3{
@@ -102,6 +103,7 @@ nav, .footer-nav{
     background-color: $main_color;
     color: $background_color;
     cursor: pointer;
+    border-color: $background_color;
 }
 
 
@@ -157,28 +159,33 @@ header{
 }
 
 // GALLERY 
+
 .gallery-container{
-    margin: 5px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-rows: minmax(100px,auto);
+    grid-gap: 10px;
+    margin: 10px auto 10px;
+    max-width: 1300px;
+    
+
+    div{
+        padding: 50%;
+        position: relative;
+    }
+
+    div img{
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+    }
 }
 
-.gallery{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-}
-
-.gallery > div{
-    flex: 1;
-}
-
-.gallery img{
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-    vertical-align: middle;
-    border-radius: 5px;
-}
 
 // RECOMMENDATIONS
 .flex-recommendations{
@@ -188,6 +195,7 @@ header{
 
 .recommendations{
     text-align: center;
+    padding: 3em;
 }
 
 .dark-container{
@@ -252,3 +260,5 @@ footer section{
 span{
     @include font-package();
 }
+
+

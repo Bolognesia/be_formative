@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./stylesheet/stylesheet-core.css">
+    <link rel="stylesheet" href="./stylesheet/reset.css">
     <title>Black Estate</title>
 </head>
 <body>
@@ -13,19 +14,28 @@
             <img src="./images/logo.svg" alt="black-estate-logo">
         </div>
 
-        <nav class="main-nav"> 
-            <ul>
-                <li><a href="">Home</a></li>
-                <li><a href="">Wine</a></li>
-                <li><a href="">Visit</a></li>
-                <li><a href="">About</a></li>
-                <li><a href="">Contact</a></li>  
-            </ul>
+        <nav>
+            <input type="checkbox" id="nav" class="hidden"/>
+            <label for="nav" class="nav-open"><i></i><i></i><i></i></label> 
+            <div class="main-nav">
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">Wine</a></li>
+                    <li><a href="">Visit</a></li>
+                    <li><a href="">About</a></li>
+                    <li><a href="">Contact</a></li>
+                    <div id="login-cart-mobile">
+                        <input class="btn" type="submit" value="Log In">
+                        <img src="./images/cart.svg" alt="cart-icon">
+                    </div> 
+                </ul>
+            </div>
         </nav>
 
-        <div>
+
+        <div id="login-cart">
             <input class="btn" type="submit" value="Log In">
-            <img src="./images/cart.svg" alt="cart-icon">
+            <a href=""><img src="./images/cart.svg" alt="cart-icon"></div></a>
         </div>
     </header>
 
@@ -43,26 +53,44 @@
 
         <section class="recommendations">
             <div>
-                <img src="./images/brown-arrow.svg" alt="brown arrow">
+                <img class="image-arrow" src="./images/brown-arrow.svg" alt="brown arrow">
                 <h2>Our Recommendations</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, perferendis.</p>
             </div>
 
             <div class="flex-recommendations">
-                <div>
+                <div class="container">
                     <img src="./images/wine-bottle.png" alt="black estate wine bottle">
                     <h3>Netherwood Pinot Noir 2019</h3>
                     <p>$75</p>
+                    <div class="overlay">
+                        <div class="text">
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut, dolore!</p>
+                            <input class="btn-beige" type="submit" value="Read More...">
+                        </div>
+                    </div>
                 </div>
-                <div>
-                    <img src="./images/wine-bottle.png" alt="black estate wine bottle">
+                <div class="container">
+                    <a href="#"><img src="./images/wine-bottle.png" alt="black estate wine bottle"></a>
                     <h3>Netherwood Pinot Noir 2019</h3>
                     <p>$75</p>
+                    <div class="overlay">
+                        <div class="text">
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut, dolore!</p>
+                            <input class="btn-beige" type="submit" value="Read More...">
+                        </div>
+                    </div>
                 </div>
-                <div>
+                <div class="container">
                     <img src="./images/wine-bottle.png" alt="black estate wine bottle">
                     <h3>Netherwood Pinot Noir 2019</h3>
                     <p>$75</p>
+                    <div class="overlay">
+                        <div class="text">
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut, dolore!</p>
+                            <input class="btn-beige" type="submit" value="Read More...">
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -115,7 +143,7 @@
         </section>
 
         <section class="dark-container newsletter">
-            <img src="./images/beige-arrow.svg" alt="beige arrow">
+            <img class="image-arrow"src="./images/beige-arrow.svg" alt="beige arrow">
             <h2>Join our Newsletter</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, est.</p>
             <div>
@@ -151,7 +179,7 @@
                     </div>
                 </div>
 
-                <div>
+                <div class="footer-column">
                     <input class="btn" type="submit" value="Joint The Club">
                     <input class="btn-beige" type="submit" value="Log In">
                 </div>

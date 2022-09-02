@@ -119,6 +119,7 @@ header {
 }
 
 .text-over-image {
+  max-width: 50%;
   position: absolute;
   bottom: 8px;
   left: 40px;
@@ -279,10 +280,13 @@ span {
     padding: 10px;
   }
   .image-container {
-    position: none;
+    display: flex;
+    flex-wrap: wrap;
+    position: static;
   }
   .text-over-image {
-    position: initial;
+    position: relative;
+    left: unset;
     background-color: rgb(69, 4, 12);
   }
   .text-over-image p, .text-over-image h1 {

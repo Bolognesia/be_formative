@@ -133,7 +133,7 @@ header{
     display: none;
 }
 
-// FLEX IMAGES
+// BANNERS
 .image-container{
     height: 35vw;
     position: relative;
@@ -146,6 +146,7 @@ header{
 }
 
 .text-over-image{
+    max-width: 50%;
     position: absolute;
     bottom: 8px;
     left: 40px;
@@ -312,14 +313,15 @@ span{
         padding: 10px;
     }
 
-    // WIDE IMAGES
-   
+    // BANNERS
     .image-container{
-        position: none;
+        display: flex;
+        flex-wrap: wrap;
+        position: static;
     }
-
     .text-over-image{
-        position: initial;
+        position: relative;
+        left: unset;
         background-color: $main_color;
         
         p, h1{

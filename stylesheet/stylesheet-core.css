@@ -87,7 +87,7 @@ header {
   align-items: center;
   margin: 40px;
 }
-header .login-cart {
+header #login-cart {
   display: flex;
   align-items: center;
 }
@@ -293,10 +293,8 @@ footer section {
     bottom: 0;
     border-radius: 0;
   }
-}
-@media (max-width: 765px) {
   #login-cart {
-    display: none;
+    display: none !important;
   }
   #login-cart-mobile {
     display: flex;
@@ -377,8 +375,8 @@ footer section {
   }
   .nav-open {
     position: fixed;
-    right: 10px;
-    top: 10px;
+    right: 5%;
+    top: 7%;
     display: block;
     width: 48px;
     height: 48px;
@@ -405,6 +403,13 @@ footer section {
   .nav-open i:nth-child(3) {
     margin-top: 4px;
   }
+  .footer-column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+}
+@media (max-width: 765px) {
   .flex-recommendations {
     flex-direction: column;
     align-items: center;
@@ -418,10 +423,5 @@ footer section {
   }
   .footer-nav {
     justify-content: space-between;
-  }
-  .footer-column {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
   }
 }/*# sourceMappingURL=stylesheet-core.css.map */
